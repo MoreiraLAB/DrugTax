@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "DrugTax"
+version = "0.0.1"
+authors = [
+  { name="A.J.Preto", email="martinsgomes.jose@gmail.com" },
+  { name="I.S.Moreira", email="irina.moreira@cnc.uc.pt" }
+]
+description = "A package to characterize small ligands"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/MoreiraLAB/DrugTax"
+"Lab Page" = "http://www.moreiralab.com/"
