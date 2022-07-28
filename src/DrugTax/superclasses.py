@@ -14,7 +14,7 @@ __project__ = "DrugTax"
 import pandas as pd
 import os
 import sys
-from drugtax import DrugTax
+from .drugtax import DrugTax
 
 def download_unique_smiles(input_drugs_list, verbose = False):
 

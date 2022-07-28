@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-Similarly to classyfire, retrieve the superclasses for an input smile
+Retrieve the kingdom and superclasses for an input smile.
+Generate simple features
 """
 
 __author__ = "A.J. Preto"
@@ -11,21 +12,7 @@ __group__ = "Data-Driven Molecular Design"
 __group_leader__ = "Irina S. Moreira"
 __project__ = "DrugTax"
 
-HALOGENS = ["At", "F", "Cl", "Br", "I"]
-METALS =  ["Li","Be","Na","Mg","Al","K", \
-			"Ca","Sc","Ti","V","Cr","Mn","Fe","Co",\
-			"Ni","Cu","Zn","Ga","Rb","Sr","Y","Zr",\
-			"Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd",\
-			"In","Sn","Cs","Ba","La","Ce","Pr","Nd",\
-			"Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er",\
-			"Tm","Yb","Lu","Hf","Ta","W","Re","Os",\
-			"Ir","Pt","Au","Hg","Tl","Pb","Bi","Po",\
-			"Fr","Ra","Ac","Th","Pa","U","Np","Pu",\
-			"Am","Cm","Bk","Cf","Es","Fm","Md","No",\
-			"Lr","Rf","Db","Sg","Bh","Hs","Mt","Ds",\
-			"Rg","Cn","Nh","Fl","Mc", "Lv"]
-GROUP_15 = ["N", "P", "As", "Sb", "Bi", "Mc"]
-CHARACTERS_FILE = "characters_list.txt" 
+from .variables import *
 
 def only_atoms_string(input_string):
 
@@ -45,22 +32,21 @@ def arbitrary_rings(input_string):
 	import re
 	return re.sub("[1234567890]","&", input_string)
 
-def character_count_features(input_smile, input_file = CHARACTERS_FILE):
+def character_count_features(input_smile, input_list =  CHARACTERS_LIST):
 
 	"""
 	Open a previously constructed text file with the available characters for SMILE format.
 	Outputs dictionary with counts of listed characters 
 	"""
 	output_dictionary, usable_smile = {}, input_smile
-	with open(input_file, "r") as characters_file:
-		for row in characters_file:
-			row = row.replace("\n","")
-			output_dictionary[row] = 0
-			if (row in input_smile):
-				if len(row) == 1:
-					usable_smile = usable_smile.upper()
-				output_dictionary["char_" + row] = int(usable_smile.count(row))
-				usable_smile = usable_smile.replace(row,"")
+	for entry in input_list:
+		entry = entry.replace("\n","")
+		output_dictionary[entry] = 0
+		if (entry in input_smile):
+			if len(entry) == 1:
+				usable_smile = usable_smile.upper()
+			output_dictionary["char_" + entry] = int(usable_smile.count(entry))
+			usable_smile = usable_smile.replace(entry,"")
 	return output_dictionary
 
 def superclass_features_vector():
@@ -682,4 +668,4 @@ class DrugTax:
 
 	def __repr__(self):
 
-		return "-".join(sorted(self.superclasses))
+		return  "SMILE: " + self.smile + "\nKingdom: " + self.kingdom +"\nSuperclasses: " + "-".join(sorted(self.superclasses))
