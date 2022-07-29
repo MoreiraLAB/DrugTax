@@ -39,7 +39,7 @@ The `retrieve_taxonomic_class` function has different arguments that can be used
 
 # Plotting
 
-In order to visualize the data retrieved from bulk analysis, **DrugTax** leverages `UpSetPlot`, a package designed to allow the visualization of a large number of intersecting sets. This computation requires a file generated in the above Bulk Analysis sections. When writing the files, the summary table will be the one with the termination `*_assess,csv`, the beginning of the name depends on the users chosen `output_name`. This file is the one that can be fed to the `plot_categories` function.
+In order to visualize the data retrieved from bulk analysis, **DrugTax** leverages `UpSetPlot`, a package designed to allow the visualization of a large number of intersecting sets. This computation requires a file generated in the above Bulk Analysis sections. When writing the files, the summary table will be the one with the termination `*_assess.csv`, the beginning of the name depends on the users chosen `output_name`. This file is the one that can be fed to the `plot_categories` function.
 
 `drugtax.plot_categories("testing_assess.csv", output_name = "plot")`
 
