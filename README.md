@@ -27,7 +27,7 @@ The `molecule` object now has a series of useful properties such as:
 
 For superclass computation, instead of directly invoking the **DrugTax** class, it is possible to use `retrieve_taxonomic_class` on several different inputs. The example below shows an example using only a SMILEs list, however, it is also possible to feed a drugs list - in which case DrugTax leverages pubchempy to retrieve the isomeric SMILEs - or a file. This function outputs a table with the SMILEs and their respective taxonomy, as well as a summary table detailing how many of which superclass combinations are present on the dataset.
 
-`smiles_table, summary_table = superclasses.retrieve_taxonomic_class(["CCNO","CCC"], input_mode = "smiles_list", output_name = "testing", write_values = True)`
+`smiles_table, summary_table = drugtax.retrieve_taxonomic_class(["CCNO","CCC"], input_mode = "smiles_list", output_name = "testing", write_values = True)`
 
 The `retrieve_taxonomic_class` function has different arguments that can be used to pick input and output information for bulk analysis submission. These are:
 - `input_data`: this is the only mandatory argument, corresponding to either a smiles list, a drugs names list or a file.
@@ -41,7 +41,7 @@ The `retrieve_taxonomic_class` function has different arguments that can be used
 
 In order to visualize the data retrieved from bulk analysis, **DrugTax** leverages `UpSetPlot`, a package designed to allow the visualization of a large number of intersecting sets. This computation requires a file generated in the above Bulk Analysis sections. When writing the files, the summary table will be the one with the termination `*_assess,csv`, the beginning of the name depends on the users chosen `output_name`. This file is the one that can be fed to the `plot_categories` function.
 
-`plotting.plot_categories("testing_assess.csv", output_name = "plot")`
+`drugtax.plot_categories("testing_assess.csv", output_name = "plot")`
 
 The `plot_categories` function has three arguments:
 - `input_file`: the name of the `*_assess.csv` previously retrieved.
