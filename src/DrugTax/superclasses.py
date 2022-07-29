@@ -38,7 +38,7 @@ def download_unique_smiles(input_drugs_list, verbose = False):
 				continue
 	return smiles_dictionary
 
-def retrieve_taxonomic_class(input_smiles, input_mode = "file", target_column = "", \
+def retrieve_taxonomic_class(input_data, input_mode = "file", target_column = "", \
 								output_name = "", write_values = False, \
 								input_sep = ""):
 	"""
@@ -58,16 +58,16 @@ def retrieve_taxonomic_class(input_smiles, input_mode = "file", target_column = 
 	"""
 
 	if input_mode == "file":
-		input_table = pd.read_csv(input_smiles, sep = input_sep, header = 0)
+		input_table = pd.read_csv(input_data, sep = input_sep, header = 0)
 		smile_column = list(input_table[target_column])
 
 	if input_mode == "drugs_list":
-		molecules_dictionary = download_unique_smiles(input_smiles)
+		molecules_dictionary = download_unique_smiles(input_data)
 		input_table = pd.DataFrame(molecules_dictionary.items(), columns = ["NAME","SMILE"])
 		smile_column = list(input_table["SMILE"])
 
 	if input_mode == "smiles_list":
-		smile_column = input_smiles
+		smile_column = input_data
 		input_table = pd.DataFrame(smile_column, columns = ["SMILE"])
 
 	tax_classes = []

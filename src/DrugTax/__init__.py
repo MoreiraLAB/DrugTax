@@ -13,3 +13,5 @@ __project__ = "DrugTax"
 
 from .variables import *
 from .drugtax import *
+from .superclasses import *
+from .plotting import *
