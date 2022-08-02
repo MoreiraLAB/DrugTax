@@ -41,7 +41,7 @@ def character_count_features(input_smile, input_list =  CHARACTERS_LIST):
 	output_dictionary, usable_smile = {}, input_smile
 	for entry in input_list:
 		entry = entry.replace("\n","")
-		output_dictionary[entry] = 0
+		output_dictionary["char_" + entry] = 0
 		if (entry in input_smile):
 			if len(entry) == 1:
 				usable_smile = usable_smile.upper()

@@ -3,9 +3,11 @@ Categorize small ligands according to chemical properties. Derive simple and exp
 
 # Installation
 
-To install **DrugTax**, first make sure you have **python 3.9.x** installed. Then, run:
+To install **DrugTax**, first make sure you have **python 3.9.x** installed.
 
-`pip install drugtax`
+`pip install drugtax upsetplot==0.6.0 pandas==1.2.4 matplotlib==3.5.1 pubchempy==1.0.4`
+
+In order to ensure all necessary packages are installed.
 
 # Usage
 Firstly, import DrugTax
