@@ -58,4 +58,5 @@ In order to visualize the data retrieved from bulk analysis, **DrugTax** leverag
 The `plot_categories` function has three arguments:
 - `input_file`: the name of the `*_assess.csv` previously retrieved.
 - `output_name`: a name for the output `*.png` file.
-- `threshold`: with default 1, this function triggers an aggregation of low populated superclass combinations to their above counterpart. `threshold` is the minimum number of entries in the file for it to be aggregated. 
+- `threshold`: with default 1, this argument triggers an aggregation of low populated superclass combinations to their above counterpart. `threshold` is the minimum number of entries in the file for it to be aggregated. 
+- `element_size`: with default 100, this argument defines the size of labels and titles on the plot.

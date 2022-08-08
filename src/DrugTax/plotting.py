@@ -87,7 +87,7 @@ def merge_categories(input_table, target_threshold = 10, \
 		cat_count.append(usable_superclasses[proper_key])
 	return cat_list, cat_count
 
-def plot_categories(input_file, threshold = 1, output_name = ""):
+def plot_categories(input_file, threshold = 1, output_name = "", element_size = 100):
 
 	"""
 	Open the input file and analyse category overlap. Produces an upset plot with the category
@@ -109,6 +109,5 @@ def plot_categories(input_file, threshold = 1, output_name = ""):
 							report_changes = True, report_name = output_name, merging_mode = "min")
 	data_object = from_memberships(categories_list, data = categories_counts)
 	plt.figure(figsize = (50, 50))
-	plt.legend(prop={'size': 12})
-	upset_plot(data_object)
+	upset_plot(data_object, element_size = element_size)
 	plt.savefig(output_name + ".png")
