@@ -13,7 +13,7 @@ A.J.<b>Preto</b>, Paulo C. <b>Correia</b> and Irina S. <b>Moreira</b>
 
 # Installation
 
-To install **DrugTax**, first make sure you have **python 3.6.x** installed.
+To install **DrugTax**, first make sure you have **python 3.6.x**, or above, installed.
 
 `pip install drugtax upsetplot==0.6.0 pandas==1.1.5 matplotlib==3.3.4 pubchempy==1.0.4`
 

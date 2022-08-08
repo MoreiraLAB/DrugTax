@@ -109,5 +109,6 @@ def plot_categories(input_file, threshold = 1, output_name = ""):
 							report_changes = True, report_name = output_name, merging_mode = "min")
 	data_object = from_memberships(categories_list, data = categories_counts)
 	plt.figure(figsize = (50, 50))
+	plt.legend(prop={'size': 12})
 	upset_plot(data_object)
 	plt.savefig(output_name + ".png")
