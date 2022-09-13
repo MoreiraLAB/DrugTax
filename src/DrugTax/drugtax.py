@@ -489,7 +489,12 @@ class DrugTax:
 		spin-paired (singlet state) or spin-non-paired (triplet state). Subclasses of carbenes include acyl carbenes, imidoyl carbenes, and vinyl carbenes.
 		Note: In a SMILE, "." denotes unpaired electrons
 		"""
-
+		for current_carbene_config in ["[C-]", "[C--]","[C---]","[C-2]","[C-3]"]:
+			if current_carbene_config in self.smile:
+				self.superclasses.append("carbenes")
+				self.features["carbene"] = 1
+				return
+				
 		if "." in self.smile:
 			split_segments = self.smile.split(".")
 			for current_segment in split_segments[0:-1]:
