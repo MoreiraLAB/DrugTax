@@ -4,7 +4,7 @@
 A.J.<b>Preto</b>, Paulo C. <b>Correia</b> and Irina S. <b>Moreira</b>
 </p>
 <p>
-<b>Abstract:</b> DrugTax is an easy-to-use Python package for small molecule detailed characterization. It extends a previously explored chemical taxonomy making it ready-to-use in any Artificial Intelligence approach. DrugTax leverages small molecule representations as input in one of their most accessible and simple forms (SMILEs) and allows the simultaneously extraction of taxonomy information and key features for big data algorithm deployment. In addition, it delivers a set of tools for bulk analysis and visualization. DrugTax is a valuable tool for chemoinformatic processing and can be easily integrated in drug discovery pipelines. DrugTax can be effortlessly installed via PyPI (https://pypi.org/project/DrugTax/) or GitHub (https://github.com/MoreiraLAB/DrugTax).
+<b>Abstract:</b> DrugTax is an easy-to-use Python package for small molecule detailed characterization. It extends a previously explored chemical taxonomy making it ready-to-use in any Artificial Intelligence approach. DrugTax leverages small molecule representations as input in one of their most accessible and simple forms (SMILEs) and allows the simultaneously extraction of taxonomy information and key features for big data algorithm deployment. In addition, it delivers a set of tools for bulk analysis and visualization that can also be used for chemical space representation and molecule similarity assessment. DrugTax is a valuable tool for chemoinformatic processing and can be easily integrated in drug discovery pipelines. DrugTax can be effortlessly installed via PyPI (https://pypi.org/project/DrugTax/) or GitHub (https://github.com/MoreiraLAB/DrugTax).
 </p>
 
 <p align="center">
