@@ -60,3 +60,9 @@ The `plot_categories` function has three arguments:
 - `output_name`: a name for the output `*.png` file.
 - `threshold`: with default 1, this argument triggers an aggregation of low populated superclass combinations to their above counterpart. `threshold` is the minimum number of entries in the file for it to be aggregated. 
 - `element_size`: with default 100, this argument defines the size of labels and titles on the plot.
+
+# Scientific Publication
+
+If you use this work, please cite:
+
+**A.J.Preto, Paulo C. Correia & Irina S. Moreira**, *DrugTax: package for drug taxonomy identification and explainable feature extraction*, Journal of Cheminformatics, 14(73): 2022. https://jcheminf.biomedcentral.com/articles/10.1186/s13321-022-00649-w

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "drugtax"
-version = "1.0.12"
+version = "1.0.14"
 authors = [
   { name="A.J.Preto", email="martinsgomes.jose@gmail.com" },
   { name="I.S.Moreira", email="irina.moreira@cnc.uc.pt" }
