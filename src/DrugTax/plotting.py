@@ -11,17 +11,16 @@ __group__ = "Data-Driven Molecular Design"
 __group_leader__ = "Irina S. Moreira"
 __project__ = "DrugTax"
 
-import pandas as pd
-import os
-import sys
-import matplotlib.pyplot as plt
-from upsetplot import plot as upset_plot
-from upsetplot import from_memberships
-
 def merge_categories(input_table, target_threshold = 10, \
 						merging_mode = "min", report_changes = False, \
 						report_name = ""):
 	
+	import pandas as pd
+	import os
+	import sys
+	import matplotlib.pyplot as plt
+	from upsetplot import plot as upset_plot
+	from upsetplot import from_memberships
 	"""
 	In order to avoid too large a list of unique categories, use this function to merge them if adequate
 	- target_threshold = 10: change this to limit the number of superclass combinations 
@@ -96,6 +95,12 @@ def plot_categories(input_file, threshold = 1, output_name = "", element_size = 
 	Categories will be aggregated, when possible, to a less specific category (less superclasses)
 	- output_name = "": change the outputname of your png file
 	"""
+	import pandas as pd
+	import os
+	import sys
+	import matplotlib.pyplot as plt
+	from upsetplot import plot as upset_plot
+	from upsetplot import from_memberships
 	opened_table = pd.read_csv(input_file, sep = ",", header = 0)
 	opened_table.columns = ["Superclasses","Count"]
 	organic = ["organoheterocyclic","organosulfur","lipids","allenes","benzenoids","phenylpropanoids_and_polyketides",\
